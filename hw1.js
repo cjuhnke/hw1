@@ -25,13 +25,13 @@ let weatherData = {
 }
 
 currentTemp = weatherData.current.temperature;
-currentConditions = weatherData.current.conditions;
+currentConditions = weatherData.current.conditions.toLowerCase();
 
 tomorrowTemp = weatherData.forecast[0].temperature;
-tomorrowConditions = weatherData.forecast[0].conditions;
+tomorrowConditions = weatherData.forecast[0].conditions.toLowerCase();
 
 nextDayTemp = weatherData.forecast[1].temperature;
-nextDayConditions = weatherData.forecast[1].conditions;
+nextDayConditions = weatherData.forecast[1].conditions.toLowerCase();
 
 console.log('Currently it is ' + currentTemp + ' degrees and ' + currentConditions + '. Tomorrow it will be ' + tomorrowTemp + ' and ' + tomorrowConditions +'.' + "\n",
 'The next day we will see ' + nextDayConditions + ' skies, with a temperature of '+ nextDayTemp +'.');
